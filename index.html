@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CinéNugget</title>
+    <title>CinéNugget - Trouve ta pépite</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <h1>Bienvenue sur CinéNugget 🎬⛏️</h1>
-    <p>Clique sur le bouton pour découvrir un film ou une série méconnue !</p>
-    <button onclick="alert('Fonctionnalité en cours de développement')">Trouver une pépite</button>
+    <p>Dis-moi ce que tu cherches, et je trouverai une pépite pour toi !</p>
+
+    <form id="preferences">
+        <label>Quel genre préfères-tu ?</label>
+        <select id="genre">
+            <option value="28">Action</option>
+            <option value="35">Comédie</option>
+            <option value="18">Drame</option>
+            <option value="878">Science-Fiction</option>
+            <option value="27">Horreur</option>
+        </select>
+
+        <label>Quelle époque t’intéresse ?</label>
+        <select id="decennie">
+            <option value="1980">Années 80</option>
+            <option value="1990">Années 90</option>
+            <option value="2000">Années 2000</option>
+            <option value="2010">Années 2010</option>
+        </select>
+
+        <label>Quelle ambiance veux-tu ?</label>
+        <select id="ambiance">
+            <option value="joyful">Léger</option>
+            <option value="dark">Intense</option>
+            <option value="thoughtful">Contemplatif</option>
+        </select>
+
+        <button type="submit">Trouver une pépite</button>
+    </form>
+
+    <div id="resultat" style="display: none;">
+        <h2 id="titre-film"></h2>
+        <img id="affiche-film" src="" alt="Affiche du film" width="200">
+        <p id="description-film"></p>
+    </div>
 </body>
 </html>
+
